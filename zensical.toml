@@ -1,0 +1,18 @@
+[project]
+site_name = "Cloud Conversations"
+site_url = "https://docs.cloudconversations.org/"
+repo_url = "https://github.com/cloud-conversations/docs"
+repo_name = "cloud-conversations/docs"
+extra_css = ["assets/app.css"]
+extra_javascript = ["assets/home-link.js"]
+nav = [
+  { "Home" = "index.md" },
+  { "Getting Started" = "getting-started.md" },
+  { "Asking Documentation Questions" = "asking-questions.md" },
+]
+
+[project.theme]
+logo = "assets/logo.svg"
+favicon = "assets/logo.svg"
+font = false
+features = ["content.code.copy", "navigation.footer"]

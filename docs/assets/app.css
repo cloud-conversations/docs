@@ -1,0 +1,20 @@
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #239ff0;
+  --md-accent-fg-color: #239ff0;
+  --md-typeset-a-color: #4564e2;
+}
+
+.md-header {
+  background-color: #e9f5fe;
+  border-bottom: 1px solid #d3ecfc;
+}
+
+.md-header__title {
+  color: #12294d;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.md-header__button.md-logo img {
+  height: 1.6rem;
+}
