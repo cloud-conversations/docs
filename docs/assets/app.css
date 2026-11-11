@@ -18,3 +18,8 @@
 .md-header__button.md-logo img {
   height: 1.6rem;
 }
+
+.md-typeset figure img {
+  border: 1px solid #e5e5e5;
+  border-radius: 0.4rem;
+}

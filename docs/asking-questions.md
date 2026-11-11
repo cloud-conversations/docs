@@ -5,10 +5,15 @@ Cloud Conversations can answer your questions about Chameleon, using Chameleon's
 Type your question into the message box of any experiment. For example:
 
 ```text
-How do I reserve a GPU node?
+Does Chameleon offer GPUs on virtual machines?
 ```
 
 Answers from the documentation are marked **from the documentation**. Below each answer, the **Documentation** section links to the pages it used. We recommend opening them to confirm the details.
+
+<figure markdown="span">
+  ![An answer marked from the documentation, with links to its sources](assets/images/chat-documentation-gpu-vms-question.png)
+  <figcaption>An answer from the documentation, with its sources</figcaption>
+</figure>
 
 Answers draw on the following sources:
 

@@ -28,10 +28,16 @@ Head to [app.cloudconversations.org](https://app.cloudconversations.org) and cli
 
 ## Step 2: set up a keypair
 
-Cloud Conversations installs an SSH key on each instance it builds for you, so that you can log in to it. Before your first build, click **Profile** at the top of the page and go to the **Default keypair** section. You can either:
+Cloud Conversations installs an SSH key on each instance it builds for you, so that you can log in to it. Before your first build, click **Profile** at the top of the page and go to the **Default keypair** section. You can:
 
-- **Import a public key** by pasting the public half of an SSH key you already use, or
-- Choose **A keypair I have at each site** if you already have keypairs at the Chameleon sites.
+- **Import a public key** by pasting the public half of an SSH key you already use
+- Choose **A keypair I have at each site** if you already have keypairs at the Chameleon sites
+- Pick **One of my imported keys** once you have imported one
+
+<figure markdown="span">
+  ![The Default keypair section of the Profile page](assets/images/profile-keypair.png)
+  <figcaption>The Default keypair section of your Profile page</figcaption>
+</figure>
 
 Every new experiment uses your default keypair. You can change it for a single experiment from the **Keypair** menu below the message box.
 
@@ -39,15 +45,28 @@ Every new experiment uses your default keypair. You can change it for a single e
 
 Click **New experiment** in the sidebar. Below the message box, the **Project** menu shows the project this experiment builds in. Its hardware is charged to that project's allocation.
 
+<figure markdown="span">
+  ![The Project and Keypair menus below the message box](assets/images/chat-project-keypair-selections.png)
+  <figcaption>Pick a project below the message box</figcaption>
+</figure>
+
 Now tell Cloud Conversations what you want, in plain English. For example:
 
 ```text
-a compute_zen3 node at CHI@TACC for an hour
+I need a medium VM with Ubuntu 26 and htop
 ```
 
-Cloud Conversations replies with a **description** of your experiment. Let's go through it:
+Cloud Conversations replies with a **description** of your experiment.
+
+<figure markdown="span">
+  ![A description of a medium VM with Ubuntu 26.04 and htop](assets/images/chat-description-card.png)
+  <figcaption>The description of an experiment, ready to approve</figcaption>
+</figure>
+
+Let's go through it:
 
 - **Requirements** come first: the site, the lease length and start, the hardware, and the image. The column on the right shows whether you stated each one, or Cloud Conversations inferred it or chose a default.
+- **Software** lists the packages Cloud Conversations installs after boot. Click a group to see each package and its checks.
 - The **Rubric** lists the checks your instance must pass once it's built.
 - **Assumptions** lists choices made on your behalf. Click **Change** next to one to correct it.
 - **This testbed cannot** lists anything in your request that Chameleon can't provide.
@@ -58,15 +77,21 @@ To change something, say so in another message, for example *make it two hours*.
 
 When the description looks right, click **Approve and build**. Cloud Conversations reserves the hardware, boots your instance, and checks it against the rubric. If the first attempt fails, it may look at what went wrong, reserve different hardware, or revise the description.
 
-The build card shows each step as it happens. When the build passes, the **Log in** section of the card shows the command to connect, along with the time your lease ends:
+The build card shows each step as it happens. When the build passes, the **Log in** section of the card shows the command to connect, along with the time your lease ends.
 
-```bash
-ssh cc@<address>
-```
+<figure markdown="span">
+  ![A passed build card with the ssh command, the rubric results, and each build step](assets/images/chat-passed-build.png)
+  <figcaption>A passed build, with the command to log in</figcaption>
+</figure>
 
 ## Step 5: release your resources
 
 When you're done, click **Release resources** on the build card. If you don't, your hardware stays reserved until the lease ends.
+
+<figure markdown="span">
+  ![The Release resources button and the resources it releases](assets/images/chat-release-build.png)
+  <figcaption>Release your resources from the build card</figcaption>
+</figure>
 
 !!! tip
 
