@@ -2,7 +2,7 @@
 
 **Welcome to Cloud Conversations!**
 
-Cloud Conversations lets you build experiment environments on [Chameleon](https://www.chameleoncloud.org) by describing them in plain English. Tell it the hardware and software you need, review the description it writes, and approve it. Cloud Conversations reserves the hardware, boots your instance, installs your software, and checks the result for you. You can also ask it questions about Chameleon, answered from Chameleon's documentation.
+Cloud Conversations lets you build experiment environments on [Chameleon](https://www.chameleoncloud.org) by describing them in plain English. Tell it the hardware and software you need, review the description it writes, and approve it. Cloud Conversations reserves the hardware, boots your instance, installs your software, and checks the result for you. You can also ask it questions about Chameleon, answered from Chameleon's documentation. Ask what you have running, and it lists the leases, instances, and other resources in your Chameleon project.
 
 Every description includes a **rubric**: a list of checks Cloud Conversations writes from your request, such as the CPU, memory, GPU, operating system, and each package you asked for. After the build, it runs each check on your instance. The build passes only if every check passes.
 

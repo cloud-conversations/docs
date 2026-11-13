@@ -17,6 +17,7 @@ At the end of this guide, you'll have learned how to:
 - Describe an experiment in plain English and review the description
 - Build it on Chameleon hardware and connect to it over SSH
 - Release your resources when you're done
+- See what you have running in your project
 
 ## Step 1: log in
 
@@ -91,6 +92,28 @@ When you're done, click **Release resources** on the build card. If you don't, y
 <figure markdown="span">
   ![The Release resources button and the resources it releases](assets/images/chat-release-build.png)
   <figcaption>Release your resources from the build card</figcaption>
+</figure>
+
+## See what you have running
+
+Not sure what's still running? Ask in any experiment:
+
+```text
+what resources do I have running?
+```
+
+Cloud Conversations reads your project at every Chameleon site and lists what it finds:
+
+- **Your running experiments** are experiments you built with Cloud Conversations that still hold resources. Click one to open its chat.
+- **Other running resources** are leases and instances in your project that Cloud Conversations didn't create.
+- **Already released** lists experiments whose resources you have released.
+- **Also in your project** lists your project's floating IPs, security groups, images, key pairs, networks, and routers. Click it to expand the list.
+
+You can also ask for one kind of resource or one site, for example *list my instances* or *what leases do I have at CHI@TACC?*
+
+<figure markdown="span">
+  ![A list of running experiments, other running resources, and the rest of the project](assets/images/chat-list-resources.png)
+  <figcaption>The resources in your project</figcaption>
 </figure>
 
 !!! tip
